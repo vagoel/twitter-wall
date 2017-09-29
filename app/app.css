@@ -1,0 +1,39 @@
+body {
+    color: black;
+    font-size: 16px;
+    font-family: monospace;
+    width:100%;
+    height: 100%;
+}
+header {
+    width:100%;
+    text-align: center;
+    background-color: black;
+    color:white;
+    position: fixed;
+}
+.content {
+    min-width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding-top: 80px;
+}
+.content>section{
+    margin:10px;
+}
+.tweets-list{
+    list-style: none
+}
+.tweets-list>li{
+    padding-top: 10px;
+}
+section.tweets-container {
+    max-height: 80vh;
+    overflow-y:scroll;
+}
+

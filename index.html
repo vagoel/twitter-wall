@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Twitter Wall</title>
+    <link rel="stylesheet" href="bower_components/normalize-css/normalize.css">
+    <link rel="stylesheet" href="app/app.css">
+    <script src="bower_components/underscore/underscore.js"></script>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="app/app.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body ng-app="MyWall">
+    <header><h3>Twitter Wall</h3></header>
+    <content class="content" ng-controller="MyWallController">
+        <section class="form-controls">
+            <form ng-submit="searchTweets()">
+                <input type="text" ng-model="userInput" size="30" placeholder="Enter Keyword...">
+                <input type="submit" value="Search">
+            </form>
+        </section>
+        <section class="tweets-container" >
+            <ul class="tweets-list">
+                <li  ng-repeat="tweet in tweets track by $index">
+                    {{tweet}}
+                </li>
+            </ul>
+        </section>
+    </content>
+    <footer></footer>
+</body>
+
+</html>
